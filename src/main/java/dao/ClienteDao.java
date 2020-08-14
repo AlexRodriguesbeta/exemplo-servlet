@@ -11,9 +11,9 @@ import model.Cliente;
 import util.ConexaoBanco;
 
 public class ClienteDao {
-    private Connection con;
+    
     public static void cadastrar(Cliente cliente) throws SQLException {
-        
+
         Connection conexao = ConexaoBanco.getConexao();
 
         String query = "INSERT INTO tbcliente (nome, endereco, cpf, data_nascimento) VALUES (?,?,?,?)";
@@ -29,9 +29,11 @@ public class ClienteDao {
         conexao.close();
     }
      
-    public List<Cliente> pesquisar() throws SQLException, Exception {
+    public List<Cliente> pesquisar() throws SQLException {
+
+        Connection con = ConexaoBanco.getConexao();
         
-        List<Cliente> lista = new ArrayList();
+        List<Cliente> lista = new ArrayList<>();
         String query = "SELECT * FROM tbcliente";
         
         PreparedStatement st = con.prepareStatement(query);
@@ -55,7 +57,7 @@ public class ClienteDao {
 
     public Cliente pesquisarPorId(int id) throws SQLException {
 
-        Connection con = new ConexaoBanco().getConnection();
+        Connection con = ConexaoBanco.getConexao();
         
         Cliente cli = new Cliente();
         String query = "SELECT * FROM tbcliente WHERE idCliente=?";

@@ -2,6 +2,7 @@ package exibir;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.SQLException;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -10,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.google.gson.Gson;
 import model.Cliente;
 import dao.ClienteDao;
-
+import java.util.List;
 
 
 public class ExibirCliente extends HttpServlet{

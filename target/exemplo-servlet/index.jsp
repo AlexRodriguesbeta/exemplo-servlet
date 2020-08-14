@@ -9,8 +9,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <body>
-    <!-- 
-    <form method="POST" action="cadastroCliente.jsp" name="dados_formulario">
+    
+    <%-- <form method="POST" action="cadastroCliente.jsp" name="dados_formulario">
             <h1 style="text-align: center; ">Cadastro de cliente </h1>
             <p> 
                 <label for="nome"> Nome: </label> 
@@ -31,8 +31,8 @@
             <p>
                 <input type="submit" name="btnCadastar" id="btnCadastrar" value="Cadastar" /> 
             </p>
-       </form>  
-     --> 
+       </form>   --%>
+     
 
        <%
             out.println("Consulta ao banco");
